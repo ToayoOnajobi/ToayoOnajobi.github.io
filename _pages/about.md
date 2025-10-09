@@ -6,12 +6,10 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: assets/img/20250801_185015.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -31,6 +29,4 @@ Welcome. My name Oluwatoayomi Oretofunmi Onajobi, though I go by Toayo. I am a S
 
 I have experience in developing programs and software in both C++ and Java. In addition to my coding background, I also have dabbled into design, Maya and Asperite being my software of choices when related to 3D Modelling and Pixel Art. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Outside of college, I enjoy drawing digitally, collecting DC comics and I often participate in tournaments for the video game, Super Smash Brothers Ultimate. 
