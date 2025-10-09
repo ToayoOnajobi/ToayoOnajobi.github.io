@@ -6,10 +6,12 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: assets/img/20250801_185015.jpg
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-
+    <p>555 your office number</p>
+    <p>123 your address street</p>
+    <p>Your City, State 12345</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -29,4 +31,4 @@ Welcome. My name Oluwatoayomi Oretofunmi Onajobi, though I go by Toayo. I am a S
 
 I have experience in developing programs and software in both C++ and Java. In addition to my coding background, I also have dabbled into design, Maya and Asperite being my software of choices when related to 3D Modelling and Pixel Art. 
 
-Outside of college, I enjoy drawing digitally, collecting DC comics and I often participate in tournaments for the video game, Super Smash Brothers Ultimate. 
+Outside of college, I enjoy drawing digitally, collecting DC comics and often participate in tournaments in the video game, Super Smash Brothers Ultimate.
