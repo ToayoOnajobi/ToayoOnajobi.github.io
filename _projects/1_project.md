@@ -9,7 +9,7 @@ related_publications: true
 ---
 
 Gamu-Dama is a Retro-Inspired Beat-em Up Arcade game that a fellow USC student, Marcus Gordon and I had developed. 
-This game was primarily developed for our CTIN-489 class, in this class, it is a requirement for students to get into pairs and work with each other to create a game in the game engine, Unity. After the Alpha Build is completed, we then collaborated with students from the University of Berkley, these students would help produce the music for our game. The purpose is to gain experience in collaborating with others in relation to Game Development. 
+This game was primarily developed for our CTIN-489 class, in this class, it is a requirement for students to get into pairs and work with each other to create a game in the game engine, Unity. After the Alpha Build is completed, we then collaborated with students from the Berklee College of Music, these students would help produce the music for our game. The purpose is to gain experience in collaborating with others in relation to Game Development. 
 
 My roles in Gamu-Dama were the following: 
      - Games Designer
@@ -27,7 +27,7 @@ I was in charge of designing and animating the sprites of the main character, Ri
 
 Sound Designer: 
 
-While most of the sound design had been done by teammates from Berkley, I had created the sound effect of Rikishi's Konpeito colliding with surfaces. This was done in the program, LMMS where I had utilized low octave chord of notes which closely resembled to that of a heavy object making contact with a hard surface. Then I had edited the reverb. 
+While most of the sound design had been done by teammates from Berklee, I had created the sound effect of Rikishi's Konpeito colliding with surfaces. This was done in the program, LMMS where I had utilized low octave chord of notes which closely resembled to that of a heavy object making contact with a hard surface. Then I had edited the reverb. 
 
 QA Testing: 
 
