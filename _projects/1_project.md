@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Gamu-Dama
-description: with background image
-img: assets/img/12.jpg
+description: Unity Game, developed for USC's CTIN-489 class 
+img: assets/img/GamuDama/GamuDamaTitle.jpeg
 importance: 1
 category: work
 related_publications: true
@@ -12,10 +12,11 @@ Gamu-Dama is a Retro-Inspired Beat-em Up Arcade game that a fellow USC student, 
 This game was primarily developed for our CTIN-489 class, in this class, it is a requirement for students to get into pairs and work with each other to create a game in the game engine, Unity. After the Alpha Build is completed, we then collaborated with students from the University of Berkley, these students would help produce the music for our game. The purpose is to gain experience in collaborating with others in relation to Game Development. 
 
 My roles in Gamu-Dama were the following: 
-    - Games Designer
-    - Pixel Artist & Animator 
-    - Sound Designer 
-    - QA Testing 
+     - Games Designer
+     - Pixel Artist & Animator 
+     - Sound Designer 
+     - QA Testing 
+
 
 
     ---
