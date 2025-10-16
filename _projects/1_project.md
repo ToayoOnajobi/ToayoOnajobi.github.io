@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 1
+title: Gamu-Dama
 description: with background image
 img: assets/img/12.jpg
 importance: 1
@@ -8,11 +8,15 @@ category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Gamu-Dama is a Retro-Inspired Beat-em Up Arcade game that a fellow USC student, Marcus Gordon and I had developed. 
+This game was primarily developed for our CTIN-489 class, in this class, it is a requirement for students to get into pairs and work with each other to create a game in the game engine, Unity. After the Alpha Build is completed, we then collaborated with students from the University of Berkley, these students would help produce the music for our game. The purpose is to gain experience in collaborating with others in relation to Game Development. 
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+My roles in Gamu-Dama were the following: 
+    - Games Designer
+    - Pixel Artist & Animator 
+    - Sound Designer 
+    - QA Testing 
+
 
     ---
     layout: page
