@@ -453,7 +453,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-gamu-dama",
           title: 'Gamu-Dama',
-          description: "with background image",
+          description: "Unity Game, developed for USC&#39;s CTIN-489 class",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
