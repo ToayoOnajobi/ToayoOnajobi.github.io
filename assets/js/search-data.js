@@ -456,9 +456,9 @@ ninja.data = [{
           description: "Unity Game, developed for USC&#39;s CTIN-489 class",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-java-pong",
+          title: 'Java Pong',
+          description: "Personal Project of a Video-Game Classic",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-project-3-with-very-long-name",
