@@ -1,25 +1,20 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
+title: WeatherApp
+description: A WeatherApp developed by Java, Spring Boot and React 
 img: assets/img/7.jpg
 redirect: https://unsplash.com
 importance: 3
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This was developed using the following tools: 
+Back-end: Java, Spring Boot 
+Front-end: React 
+API: OpenWeather API 
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+The inspiration behind this project is from USC's CSCI-201 class, here we had to create a fully developed Weather Forecast website using HTML/CSS and Javascript for the Front-end, then Java and MySQL for the Back-End. Here, I wanted to take the project further by using the popular Front-End and Back-End tools, React and Spring Boot 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

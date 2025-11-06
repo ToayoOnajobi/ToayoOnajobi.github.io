@@ -5,11 +5,13 @@ description: Personal Project of a Video-Game Classic
 img: assets/img/JPong/StartGame.jpeg
 importance: 2
 category: work
-giscus_comments: true
+
 ---
 
 Language: Java 
+
 IDE: IntelliJ Community Edition 
+
 2-Player Game 
 
 Here I've recreated a video-game classic, Pong. I decided to use Java as my language of choice when creating this game. I had gotten inspired by watching a video of a developer who had created a full RPG within Eclipse IDE. In addition, in USC's ITP-380 class, Pong was the first video game that is developed in the class. As a result, I decided to recreate Pong in IntelliJ Community Edition IDE. 
