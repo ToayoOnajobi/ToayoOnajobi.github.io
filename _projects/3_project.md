@@ -3,7 +3,6 @@ layout: page
 title: WeatherApp
 description: A WeatherApp developed by Java, Spring Boot and React 
 img: assets/img/7.jpg
-redirect: https://unsplash.com
 importance: 3
 category: work
 ---
