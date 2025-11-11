@@ -9,7 +9,7 @@ profile:
   image: ToayoOnajobiSelf.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    
+  <img src="/assets/gif/LavaRock.gif" alt="Animation demo" style="width:250px; border-radius:8px; margin-top:10px;" />
 
 
 ---
