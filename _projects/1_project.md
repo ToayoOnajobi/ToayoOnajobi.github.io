@@ -5,7 +5,6 @@ description: Unity Game, developed for USC's CTIN-489 class
 img: assets/img/GamuDama/GamuDamaTitle.jpeg
 importance: 1
 category: work
-related_publications: true
 ---
 
 Gamu-Dama is a Retro-Inspired Beat-em Up Arcade game that a fellow USC student, Marcus Gordon and I had developed. 
@@ -55,7 +54,7 @@ The process for thee bugs will then be tested after the new build is launched.
         {% include figure.liquid loading="eager" path="assets/img/GamuDama/GamuDamaTutorial.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/GamuDama/GamuDamaMap.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/GamuDama/GamuDamaLevelOverview.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
