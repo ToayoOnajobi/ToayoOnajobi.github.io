@@ -30,6 +30,9 @@ I was in charge of designing and animating the sprites of the main character, Ri
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/GamuDama/Enemy_Walking.gif" title="Animation" class="img-fluid rounded z-depth-1" %}
     </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/GamuDama/idle_animation.gif" title="Animation" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
 Sound Designer: 
 
@@ -38,9 +41,9 @@ While most of the sound design had been done by teammates from Berklee, I had cr
 QA Testing: 
 
 I also dabbled in QA Testing for this game as well. The way I approached this role was by writing a bug report for each level, then each bug that I had found would be categorized via two tiers: 
-- Major
+- Major:
   Bugs that required immediate attention because they were either game-breaking or exploited the overall mechanic of the game: for example, enemies not approaching the player and remaining stuck at the bottom of a cliff they are supposed to climb. 
-- Minor 
+- Minor:
   Bugs that are not of high importance but should fixed regardless because its detail somewhat affects a small portion of the game. A good example was the ghost level, the hue and brightness was previously way to high which could lead to some players to have difficulty playing that level. 
 The process for thee bugs will then be tested after the new build is launched. 
 
@@ -64,44 +67,9 @@ The process for thee bugs will then be tested after the new build is launched.
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+   An image of the first level after the tutorial. Lower left containing the enemy count whereas the top right is the health bar for the character you must protect. 
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
 
 <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="https://www.youtube.com/embed/5T6_dD88pnk?si=4vy5p2p4eTZPC0Au" width="800px" height="450px" %}
