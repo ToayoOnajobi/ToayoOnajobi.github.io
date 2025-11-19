@@ -1,7 +1,7 @@
 ---
 layout: page
 title: project 8
-description: an other project with a background image and giscus comments
+description: WIP
 img: assets/img/9.jpg
 importance: 4
 category: work

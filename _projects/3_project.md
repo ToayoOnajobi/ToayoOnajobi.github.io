@@ -1,7 +1,7 @@
 ---
 layout: page
 title: WeatherApp
-description: A WeatherApp developed by Java, Spring Boot and React 
+description: A WeatherApp developed by Java, Spring Boot and React, WIP
 img: assets/img/7.jpg
 importance: 3
 category: work
@@ -14,6 +14,7 @@ API: OpenWeather API
 
 The inspiration behind this project is from USC's CSCI-201 class, here we had to create a fully developed Weather Forecast website using HTML/CSS and Javascript for the Front-end, then Java and MySQL for the Back-End. Here, I wanted to take the project further by using the popular Front-End and Back-End tools, React and Spring Boot 
 
+TBC 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
