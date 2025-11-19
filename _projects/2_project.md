@@ -31,4 +31,7 @@ It allowed me to explore different libraries which I had not used before in a pr
         {% include video.liquid path="assets/img/JPong/ponggameplay.mp4" width="800px" height="450px" controls=true %}
     </div>
 </div>
+<div class="caption">
+    Here is a video of the JPong gamemplay. THe Left paddle is controlled by WS and Right paddle is controlled by Up and Down Arrow.
+</div>
 
