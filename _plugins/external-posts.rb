@@ -10,52 +10,55 @@ module ExternalPosts
     priority :high
 
     def generate(site)
-      if site.config['external_sources'] != nil
-        site.config['external_sources'].each do |src|
-          puts "Fetching external posts from #{src['name']}:"
-          if src['rss_url']
-            fetch_from_rss(site, src)
-          elsif src['posts']
-            fetch_from_urls(site, src)
-          end
+      return unless site.config['external_sources']
+
+      site.config['external_sources'].each do |src|
+        puts "Fetching external posts from #{src['name']}:"
+        if src['rss_url']
+          safe_fetch_from_rss(site, src)
+        elsif src['posts']
+          safe_fetch_from_urls(site, src)
         end
       end
     end
 
-    def fetch_from_rss(site, src)
-      xml = HTTParty.get(src['rss_url']).body
-      return if xml.nil?
-      feed = Feedjira.parse(xml)
-      process_entries(site, src, feed.entries)
+    private
+
+    # Safe RSS fetch: skips feed if it fails
+    def safe_fetch_from_rss(site, src)
+      begin
+        xml = HTTParty.get(src['rss_url']).body
+        return unless xml
+        feed = Feedjira.parse(xml)
+        process_entries(site, src, feed.entries) if feed && feed.entries
+      rescue StandardError => e
+        Jekyll.logger.warn "ExternalPosts:", "Skipping #{src['rss_url']} due to error: #{e.message}"
+      end
     end
 
     def process_entries(site, src, entries)
       entries.each do |e|
         puts "...fetching #{e.url}"
         create_document(site, src['name'], e.url, {
-          title: e.title,
-          content: e.content,
-          summary: e.summary,
+          title: e.title.to_s,
+          content: e.content.to_s,
+          summary: e.summary.to_s,
           published: e.published
         })
       end
     end
 
     def create_document(site, source_name, url, content)
-      # check if title is composed only of whitespace or foreign characters
-      if content[:title].gsub(/[^\w]/, '').strip.empty?
-        # use the source name and last url segment as fallback
-        slug = "#{source_name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')}-#{url.split('/').last}"
-      else
-        # parse title from the post or use the source name and last url segment as fallback
-        slug = content[:title].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-        slug = "#{source_name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')}-#{url.split('/').last}" if slug.empty?
+      slug = content[:title].to_s.gsub(/[^\w]/, '').strip
+      if slug.empty?
+        slug = "#{source_name.downcase.strip.gsub(' ', '-')}-#{url.split('/').last}"
       end
 
       path = site.in_source_dir("_posts/#{slug}.md")
       doc = Jekyll::Document.new(
-        path, { :site => site, :collection => site.collections['posts'] }
+        path, { site: site, collection: site.collections['posts'] }
       )
+
       doc.data['external_source'] = source_name
       doc.data['title'] = content[:title]
       doc.data['feed_content'] = content[:content]
@@ -63,15 +66,21 @@ module ExternalPosts
       doc.data['date'] = content[:published]
       doc.data['redirect'] = url
       doc.content = content[:content]
+
       site.collections['posts'].docs << doc
     end
 
-    def fetch_from_urls(site, src)
+    # Safe manual URL fetch: skips post if it fails
+    def safe_fetch_from_urls(site, src)
       src['posts'].each do |post|
-        puts "...fetching #{post['url']}"
-        content = fetch_content_from_url(post['url'])
-        content[:published] = parse_published_date(post['published_date'])
-        create_document(site, src['name'], post['url'], content)
+        begin
+          puts "...fetching #{post['url']}"
+          content = fetch_content_from_url(post['url'])
+          content[:published] = parse_published_date(post['published_date'])
+          create_document(site, src['name'], post['url'], content)
+        rescue StandardError => e
+          Jekyll.logger.warn "ExternalPosts:", "Skipping #{post['url']} due to error: #{e.message}"
+        end
       end
     end
 
@@ -82,7 +91,7 @@ module ExternalPosts
       when Date
         published_date.to_time.utc
       else
-        raise "Invalid date format for #{published_date}"
+        nil
       end
     end
 
@@ -90,21 +99,18 @@ module ExternalPosts
       html = HTTParty.get(url).body
       parsed_html = Nokogiri::HTML(html)
 
-      title = parsed_html.at('head title')&.text.strip || ''
-      description = parsed_html.at('head meta[name="description"]')&.attr('content')
-      description ||= parsed_html.at('head meta[name="og:description"]')&.attr('content')
-      description ||= parsed_html.at('head meta[property="og:description"]')&.attr('content')
-
-      body_content = parsed_html.search('p').map { |e| e.text }
-      body_content = body_content.join() || ''
+      title = parsed_html.at('head title')&.text.to_s.strip
+      description = parsed_html.at('head meta[name="description"]')&.attr('content') ||
+                    parsed_html.at('head meta[name="og:description"]')&.attr('content') ||
+                    parsed_html.at('head meta[property="og:description"]')&.attr('content') ||
+                    ''
+      body_content = parsed_html.search('p').map(&:text).join()
 
       {
         title: title,
         content: body_content,
         summary: description
-        # Note: The published date is now added in the fetch_from_urls method.
       }
     end
-
   end
 end
