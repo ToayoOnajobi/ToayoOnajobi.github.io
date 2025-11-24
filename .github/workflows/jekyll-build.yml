@@ -1,34 +1,60 @@
-name: Build and Deploy Jekyll Site
+name: Jekyll site CI
 
 on:
   push:
     branches:
-      - main  # replace with your default branch if different
+      - main
   pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
+      # 1. Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      # 2. Set up Ruby (for Jekyll)
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v2
         with:
-          ruby-version: 3.2  # al-folio works with Ruby 3.x
+          ruby-version: 3.2 # Match your Jekyll version
+          bundler-cache: true
 
+      # 3. Install dependencies
       - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
+        run: bundle install
 
-      - name: Build site with Jekyll
+      # 4. Build the site
+      - name: Build Jekyll site
         run: bundle exec jekyll build
 
-      - name: Upload _site as artifact
-        uses: actions/upload-artifact@v3
+      # 5. Upload build artifacts (site)
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: jekyll-site
+          name: site
           path: _site
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      # Checkout repository
+      - uses: actions/checkout@v4
+
+      # Download built site
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: site
+          path: _site
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _site
