@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - master
     paths:
       - "assets/**"
       - "_sass/**"
@@ -17,6 +16,9 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -26,25 +28,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # Checkout repository
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      # Setup Ruby
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
 
-      # Setup Python
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
           cache: "pip"
 
-      # Update _config.yml (giscus repo)
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -53,7 +51,6 @@ jobs:
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
 
-      # Install dependencies, debug Jekyll, and build
       - name: Install dependencies and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
@@ -61,15 +58,13 @@ jobs:
           gem install jekyll jekyll-info
           jekyll info
           export JEKYLL_ENV=production
-          bundle exec jekyll build
+          bundle exec jekyll build || (echo "Jekyll build failed!" && exit 1)
 
-      # Purge unused CSS
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
 
-      # Deploy to GitHub Pages
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
