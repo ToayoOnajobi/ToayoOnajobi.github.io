@@ -1,11 +1,11 @@
 ---
 layout: page
 title: QA Projects
-permalink: /projects/
+permalink: /qa/
 description: My QA Work
 nav: true
-nav_order: 1
-display_categories: [college, personal]
+nav_order: 7
+display_categories: []
 horizontal: false
 ---
 
