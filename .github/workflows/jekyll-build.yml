@@ -1,9 +1,9 @@
-name: Build and Deploy Jekyll Site
+name: Build & Deploy Jekyll Site
 
 on:
   push:
     branches:
-      - main  # your default branch
+      - main
   workflow_dispatch:
 
 jobs:
@@ -11,37 +11,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Checkout repository
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository  
+        uses: actions/checkout@v4
 
-    # 2. Setup Ruby (use v1 to avoid v2 resolution issues)
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.2
-        bundler-cache: true
+      - name: Setup Ruby  
+        uses: ruby/setup-ruby@v1  
+        with:
+          ruby-version: 3.2
+          bundler-cache: true
 
-    # 3. Install dependencies
-    - name: Install dependencies
-      run: |
-        gem install jekyll bundler
-        bundle install
+      - name: Install dependencies  
+        run: |
+          gem install jekyll bundler
+          bundle install
 
-    # 4. Build the Jekyll site
-    - name: Build site
-      run: bundle exec jekyll build
+      - name: Build site  
+        run: bundle exec jekyll build
 
-    # 5. Upload build artifact (use v4 to avoid v3 deprecation)
-    - name: Upload artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: site
-        path: _site
+      - name: Upload artifact  
+        uses: actions/upload-artifact@v4  
+        with:
+          name: site
+          path: _site
 
-    # 6. Deploy to GitHub Pages (peaceiris/actions-gh-pages v6)
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v6
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+      - name: Deploy to GitHub Pages  
+        uses: peaceiris/actions-gh-pages@v4  
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
