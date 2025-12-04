@@ -5,7 +5,7 @@ permalink: /projects/
 description: Here are projects that I've done for both College and Personal interests.
 nav: true
 nav_order: 1
-display_categories: [work, fun]
+display_categories: [design, programming]
 horizontal: false
 ---
 

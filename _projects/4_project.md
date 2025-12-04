@@ -4,7 +4,7 @@ title: project 4
 description: WIP
 img:
 importance: 3
-category: fun
+category: design
 ---
 
 Every project has a beautiful feature showcase page.

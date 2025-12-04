@@ -4,7 +4,7 @@ title: project 7
 description: WIP
 img: assets/img/4.jpg
 importance: 3
-category: work
+category: programming
 related_publications: true
 ---
 

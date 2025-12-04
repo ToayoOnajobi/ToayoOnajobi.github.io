@@ -4,7 +4,7 @@ title: project 8
 description: WIP
 img: assets/img/9.jpg
 importance: 4
-category: work
+category: design
 giscus_comments: true
 ---
 

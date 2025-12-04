@@ -4,7 +4,7 @@ title: Java Pong
 description: Personal Project of a Video-Game Classic 
 img: assets/img/JPong/StartGame.jpeg
 importance: 2
-category: work
+category: programming
 
 ---
 

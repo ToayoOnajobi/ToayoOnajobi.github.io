@@ -4,7 +4,7 @@ title: project 5
 description: WIP
 img: assets/img/1.jpg
 importance: 3
-category: fun
+category: programming
 ---
 
 Every project has a beautiful feature showcase page.

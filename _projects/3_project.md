@@ -4,7 +4,7 @@ title: WeatherApp
 description: A WeatherApp developed by Java, Spring Boot and React, WIP
 img: assets/img/7.jpg
 importance: 3
-category: work
+category: programming
 ---
 
 This was developed using the following tools: 
