@@ -1,6 +1,6 @@
 ---
 layout: page
-title: project 6
+title: Extinction Rush
 description: WIP
 img:
 importance: 4
