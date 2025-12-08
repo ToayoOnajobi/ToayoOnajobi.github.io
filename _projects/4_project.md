@@ -18,7 +18,7 @@ Here are the projects I've done in Maya. I've explored a couple mediums: Animati
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="assets/img/MayaContent/Toayo_Onajobi_Final_Movie.mp4.jpg"  width="800px" height="450px" controls=true %}
+        {% include video.liquid path="assets/img/MayaContent/Toayo_Onajobi_Final_Movie.mp4"  width="800px" height="450px" controls=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
