@@ -1,13 +1,13 @@
 ---
 layout: page
-title: project 4
-description: WIP
+title: Maya 
+description: Projects I've done in Maya; Animation, Character Rigging 
 img:
 importance: 3
 category: design
 ---
 
-Here are the projects I've done in Maya. I've explored a couple mediums: Animation and Design. 
+Here are the projects I've done in Maya. I've explored a couple mediums: Animation, Character Rigging and Design. 
 
     ---
     layout: page
@@ -18,7 +18,7 @@ Here are the projects I've done in Maya. I've explored a couple mediums: Animati
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid loading="eager" path="assets/img/MayaContent/Toayo_Onajobi_Final_Movie.mp4.jpg"  width="800px" height="450px" controls=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
