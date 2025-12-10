@@ -9,13 +9,6 @@ category: design
 
 Here are the projects I've done in Maya. I've explored a couple mediums: Animation, Character Rigging and Design. 
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="assets/img/MayaContent/Toayo_Onajobi_Final_Movie.mp4"  width="800px" height="450px" controls=true %}
@@ -34,27 +27,30 @@ Here are the projects I've done in Maya. I've explored a couple mediums: Animati
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/CentaurFullRig.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    A full character rig I was required to develop for my Character Rigging class.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+       {% include video.liquid path="assets/img/MayaContent/blastVNEdOw.mp4"  width="800px" height="450px" controls=true %}
     </div>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+
+<div class="row">
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include video.liquid path="assets/img/MayaContent/Assignment1_Toayo_Onajobi.mp4" width="800px" height="450px" controls=true %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include video.liquid path="assets/img/MayaContent/guy_push_up_animation.mp4" width="800px" height="450px" controls=true %}
+    </div>
 </div>
 
 The code is simple.
