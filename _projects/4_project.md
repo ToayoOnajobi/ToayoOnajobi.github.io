@@ -20,16 +20,18 @@ Here are the projects I've done in Maya. I've explored a couple mediums: Animati
     <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="assets/img/MayaContent/Toayo_Onajobi_Final_Movie.mp4"  width="800px" height="450px" controls=true %}
     </div>
+</div>
+<div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include video.liquid path="assets/img/MayaContent/hw1.mp4"  width="800px" height="450px" controls=true %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include video.liquid path="assets/img/MayaContent/Toayo_Onajobi_Movie.mp4"  width="800px" height="450px" controls=true %}
+    </div>
 </div>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
