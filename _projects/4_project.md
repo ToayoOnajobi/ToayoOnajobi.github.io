@@ -2,7 +2,7 @@
 layout: page
 title: Maya 
 description: Projects I've done in Maya; Animation, Character Rigging 
-img:
+img: assets/img/MayaContent/CentaurFullRig.jpg
 importance: 3
 category: design
 ---
@@ -25,7 +25,7 @@ Here are the projects I've done in Maya. I've explored a couple mediums: Animati
     </div>
 </div>
 
-<div class="row justify-content-sm-center">
+<div class="row">
     <div class="col-sm-8 mt-3 mt-md-0">
        {% include video.liquid path="assets/img/MayaContent/blastVNEdOw.mp4"  width="800px" height="450px" controls=true %}
     </div>
